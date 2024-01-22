@@ -1,0 +1,133 @@
+.Home{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.container-matrix{
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Matriz {
+  margin-top: 2rem;
+  width: 50%;
+  max-width: 600px;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."; 
+}
+
+.Tile {
+  aspect-ratio: 1 / 1;
+  border: 1px solid grey;
+  &.checked {
+    background-color: #00ff00;
+  }
+  cursor: pointer;
+}
+
+.cont-buttons{
+  width: 50%;
+  height: 40%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.rotate-right {
+  background-color: #2ecc71; 
+}
+
+.rotate-left {
+  background-color: #00acc1; 
+}
+
+.deleteOne {
+  background-color: #FFFF99;
+}
+
+.delete {
+  background-color: #e74c3c; 
+}
+
+.button:hover {
+  background-color: #2980b9; 
+  color: #fff; 
+  border-color: #2980b9; 
+}
+
+.button:disabled {
+  background-color: #bdc3c7;
+  color: #7f8c8d; 
+  border-color: #bdc3c7; 
+  cursor: not-allowed; 
+}
+
+.valid {
+  background-color: #e0e0e0; 
+  transition: background-color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+  &:hover {
+    background-color: #f0f0f0; 
+  }
+}
+
+.not-valid {
+  cursor: auto;
+}
+
+
+@media screen and (max-width:600px) {
+  .Matriz{
+    width: 80%;
+  }
+  .button {
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (max-height:700px) and (min-width: 700px) {
+  .Matriz{
+    width: 30%;
+  }
+}
+
+
+.index-1{
+  background-color: #00EA00 !important;
+}
+.index-2{
+  background-color: #00E300 !important;
+}
+.index-3 {
+  background-color: #03CD03 !important;
+}
